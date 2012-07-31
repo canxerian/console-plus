@@ -1,6 +1,5 @@
 {
   "name": "console-plus",
-  "preferGlobal": "true",
   "version": "0.1.0",
   "author": "Itadakimasu <mgb.nguyen@gmail.com>",
   "description": "Logging with filenames and line numbers",
