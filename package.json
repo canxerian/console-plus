@@ -1,0 +1,23 @@
+{
+  "name": "console-plus",
+  "preferGlobal": "true",
+  "version": "0.1.0",
+  "author": "Itadakimasu <mgb.nguyen@gmail.com>",
+  "description": "Logging with filenames and line numbers",
+    "keywords": [
+    "console",
+    "trace",
+    "line"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "main": "./console-plus.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itadakimasu/console-plus.git"
+  },
+  "dependencies": {
+    "callsite": "0.0.2"
+  }
+}
