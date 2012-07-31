@@ -1,4 +1,4 @@
-var console = require("./consoleplus");
+var console = require("./console-plus");
 
 // demo of different levels
 console.log("I am logging!");

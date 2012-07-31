@@ -20,7 +20,6 @@ var red   = '\033[31m',
 
 module.exports = {
 	log: function() {	
-		console.log(arguments.length)
 		var trace = getTrace(__stack[1]);
 		var string = util.format("%s [log] %s in %s:%d", trace.timestamp, util.format.apply(this, arguments), trace.file, trace.lineno);
 		
