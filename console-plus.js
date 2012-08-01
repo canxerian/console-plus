@@ -21,21 +21,21 @@ var red   = '\033[31m',
 module.exports = {
 	log: function() {	
 		var trace = getTrace(__stack[1]);
-		var string = util.format("%s [log] %s in %s:%d", trace.timestamp, util.format.apply(this, arguments), trace.file, trace.lineno);
+		var string = util.format("%s [log] in %s:%d \n%s", trace.timestamp, trace.file, trace.lineno, util.format.apply(this, arguments));
 		
 		process.stdout.write(string + "\n");
 	},
 	
 	info: function() {
 		var trace = getTrace(__stack[1]);
-		var string = util.format("%s [log] %s in %s:%d", trace.timestamp, util.format.apply(this, arguments), trace.file, trace.lineno);
+		var string = util.format("%s [info] in %s:%d \n%s", trace.timestamp, trace.file, trace.lineno, util.format.apply(this, arguments));
 		
 		process.stdout.write(colourise(36, string) + "\n");
 	},
 	
 	error: function() {
 		var trace = getTrace(__stack[1]);
-		var string = util.format("%s [log] %s in %s:%d", trace.timestamp, util.format.apply(this, arguments), trace.file, trace.lineno);
+		var string = util.format("%s [error] in %s:%d \n%s", trace.timestamp, trace.file, trace.lineno, util.format.apply(this, arguments));
 		
 		process.stdout.write(colourise(91, string) + "\n");
 	}

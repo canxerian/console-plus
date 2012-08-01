@@ -1,8 +1,29 @@
 var console = require("./console-plus");
 
 // demo of different levels
-console.log("I am logging!");
+describe("Console plus", function() {
 
-console.info("Info!");
+	describe("#log", function() {
+		it("should display a log message in default colour", function() {
+			console.log("I am logging!");	
+		});
+		
+		it("should write objects out", function() {
+			console.log({name: "Itadakimasu", hobbies: {language: "JavaScript", sport: "Ultimate frisbee"}});
+		});
+	});
 
-console.error({h: "I'm an error!", a:"ea"});
+	describe("#info", function() {
+		it("should display a log message in blue", function() {
+			console.info("Info!");
+		});
+	});
+	
+	describe("#error", function() {
+		it("should display a log message in red", function() {
+			console.error("error!");
+		});
+	});
+})
+
+
